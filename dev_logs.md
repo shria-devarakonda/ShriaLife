@@ -37,3 +37,7 @@ adding personalitytraits, that get updated with the statuses? i wonder. i really
 
 --10
 i love developing something without a clear goal on what the end product would be. it feels like it could evolve into anything i desire
+
+--11
+I dont really need the interaction layer (message queue()), unnecessary complexity. might add it later dunno
+
