@@ -27,3 +27,13 @@ should i do a status class or maintain different classes for each status that in
 --7
 i need a heckin diagram im getting confused
 
+--8
+so the person is the entire codebase basically, only one external component which is the action publisher which is where an action gets performed towards me, but that could also be self inflicted maybe. i should keep this self contained probably and maintain a queue for external actions on me and one for internal actions on me
+
+
+--9
+adding personalitytraits, that get updated with the statuses? i wonder. i really need to make that diagram
+
+
+--10
+i love developing something without a clear goal on what the end product would be. it feels like it could evolve into anything i desire
