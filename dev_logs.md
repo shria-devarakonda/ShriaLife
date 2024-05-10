@@ -13,3 +13,8 @@ I should have updateable obejcts for my mood level or motivation here. For sures
 
 --4
 I need a design diagram. i might be making a mindmap but let's see
+
+
+--5
+I just realised I might add an action to code too, and it will be upping my status of fulfillment, feeling smart and confidence etc
+i def need statuses for each subsections of my psyche. god.

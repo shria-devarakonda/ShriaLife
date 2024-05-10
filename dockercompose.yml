@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  redis:
+    image: redis:latest
+    container_name: RandomAccessMemory
+    hostname: RandomAccessMemory
+    ports:
+      - "6379:6379"
+
+  postgres:
+    image: postgres:latest
+    container_name: ReadOnlyMemory
+    hostname: ReadOnlyMemory
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: supersecret
+      POSTGRES_DB: BrainBase
+
+  rabbitmq:
+    image: rabbitmq:latest
+    container_name: Interaction
+    hostname: Interaction
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: guest
+      RABBITMQ_DEFAULT_PASS: guest
