@@ -1,13 +1,32 @@
 #todo: flesh this out
 
-import redis
+import redis as RAMTool
 
-# Connect to Redis
-r = redis.Redis(host='RandomAccessMemory', port=6379)
+class RAMConnector:
+    instance = None
+    redis_connection = None
+    
+    def __init__(self):
+        if self.instance:
+            raise Exception("use RAMConnector.create()")
+        RAMConnector.instance = self
+        self.RAM_connection = self.create_connection()
+        
+    def create(self):
+        if not RAMConnector.instance:
+            RAMConnector.instance = RAMConnector()
+        return RAMConnector.instance
+    
+    def create_connection(self):
+        RAM_connection = RAMTool.Redis(host='RandomAccessMemory', port=6379)
+        return RAM_connection
 
-# Set a key-value pair
-r.set('key', 'value')
+    def set_ram(self, kv):
+        RAM_conn = self.RAM_connection
+        RAM_conn.set('key', 'value')
 
-# Get a value by key
-value = r.get('key')
-print(value)
+    def get_ram(self, key):
+        RAM_conn = self.RAM_connection
+        value = RAM_conn.get(key)
+        print(f"The value of {key} is {value}")
+        return value
