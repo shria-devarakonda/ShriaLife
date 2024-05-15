@@ -4,7 +4,7 @@
 This repository is to help me (and maybe others) to codify life. It has an classes that could broadly logically hold methods for different things we might come up in life. It takes input and gives out an output. Input types are sensory and actions, output types are actions. I will go deeper in levels to make sense of what is happening here but it would be an evolving process. Running this might have a purpose in the future but currently it is just for me, to figure things out. I dont know what to use this for, really. However, I will develop a resilient as heck cache, thats for sure. 
 
 --2
-I am trying to codify what i must do for each types of actions. Because i've done a not so great job so far at doing that automatically, but writing this might help fix my actions as response to things things that I was not realizing I was doing and harming myself.
+I am trying to codify what i must do for each types of actions. why idk
 
 
 --3
@@ -41,3 +41,5 @@ i love developing something without a clear goal on what the end product would b
 --11
 I dont really need the interaction layer (message queue()), unnecessary complexity. might add it later dunno
 
+--12
+im not sure where this going. i wanna add something to this that makes it more fun

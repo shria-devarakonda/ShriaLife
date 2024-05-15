@@ -2,8 +2,7 @@ class SelfActions:
 
     def __init__(self, stress_level=0):
         self.stress_level = stress_level 
-        # should create a decorator for above, this should impact the input 
-        # in a certain way.
+        # this should impact the input in a certain way.
         
 
     def read_book(self, book_title=""): # yeah i know the arg is kinda insane like what 
