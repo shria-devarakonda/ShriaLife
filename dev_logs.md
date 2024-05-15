@@ -43,3 +43,8 @@ I dont really need the interaction layer (message queue()), unnecessary complexi
 
 --12
 im not sure where this going. i wanna add something to this that makes it more fun
+
+--13
+I think i figured out a possible purpose of this. goal would be to regulate the emotions and fix the personality by doing correct actions. it is basically a game, i dont know haha?
+
+

@@ -11,6 +11,9 @@ class Status:
         self.confused = random.randint(0,10)
         self.angry = random.randint(0,10)
         self.scared = random.randint(0,10)
+        self.calm = random.randint(0,10)
+        self.smart = random.randint(0,10)
+        self.manic = random.randint(0,10)
         # above metrics depend on the dream had before waking up or quality of sleep
         # or some other inexplicable thing
     
@@ -34,6 +37,9 @@ class Status:
     
     def update_scared(self,val=0):
         self.scared += val
+    
+    def update_calm(self,val=0):
+        self.calm += val
         
     def show_status(self):
         return self.__dict__

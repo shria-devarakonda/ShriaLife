@@ -1,10 +1,12 @@
-class FavouriteThings:
-    def __init__(self):
-        self.fav_movie = ""
-        self.fav_song = ""
-        # more to come
-        
-    def fav_thing_list(self):
-        return 
-
-#more to do
+favourite_movies  = ["Scott pilgrim vs. the world"]
+favourite_vid_genres = ["comedy"]
+favourite_directors  = ["charlie kaufman"]
+favourite_bands  = ["cardiacs"]
+favourite_songs  = ["work this time"]
+favourite_tv = ["mr. robot"]
+favourite_anime = ["saiki"]
+favourite_games = ["hotline miami2"]
+favourite_books = ["catcher in the rye"]
+favourite_book_genres = ["psychological"]
+difficult_books=["ulysses"]
+# todo add more

@@ -30,3 +30,9 @@ class RAMConnector:
         value = RAM_conn.get(key)
         print(f"The value of {key} is {value}")
         return value
+
+    def event(self, key, val):
+        from datetime import datetime
+        RAM_CONN = self.RAM_connection
+        val = f"{val} at {datetime.now()}"
+        RAM_CONN.lpush(key, val)
