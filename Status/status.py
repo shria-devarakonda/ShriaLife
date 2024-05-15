@@ -6,30 +6,19 @@ class Status:
         if Status.instance:
             raise Exception("use Status.create()")
         Status.instance = self
-        self.happy = 0
-        self.sad = 0
-        self.confused = 0
-        self.angry = 0
-        self.scared = 0 
+        self.happy = random.randint(0,10)
+        self.sad = random.randint(0,10)
+        self.confused = random.randint(0,10)
+        self.angry = random.randint(0,10)
+        self.scared = random.randint(0,10)
         # above metrics depend on the dream had before waking up or quality of sleep
-        # or some other inexplicable thing, so little 
-        # control on these, as it is mostly governed by the subconscious. might
-        # have to think of a more sophisticated way of initializing these
-        # also self commentary probs, figure out to have more control on 
-        # my own emotions LOL
-        self.init_emotion()
+        # or some other inexplicable thing
     
     def create(self):
         if Status.instance is None:
             Status.instance = Status()
         return Status.instance
         
-    def init_emotion(self, emos={}):
-        self.happy = emos.get("happy",random.randint(0,10))
-        self.sad = emos.get("sad",random.randint(0,10))
-        self.confused = emos.get("confused",random.randint(0,10))
-        self.angry = emos.get("angry",random.randint(0,10))
-        self.scared = emos.get("scared",random.randint(0,10))
         
     def update_happy(self,val=0):
         self.happy += val

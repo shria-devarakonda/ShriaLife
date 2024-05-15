@@ -6,33 +6,20 @@ class Personality:
         if Personality.instance:
             raise Exception("use Personality.create()")
         Personality.instance = self
-        self.confident = 0
-        self.intelligent = 0
-        self.generous = 0 
-        self.trusting = 0
-        self.brave = 0
-        self.greedy = 0
-        self.selfish = 0
-        self.evil = 0 
-        self.kind = 0
-        self.init_personality()
+        self.confident = 3
+        self.intelligent = 4
+        self.generous = 7 
+        self.trusting = 6
+        self.brave = 4
+        self.greedy = 5
+        self.selfish = 6
+        self.evil = 5 
+        self.kind = 6
     
     def create(self):
         if Personality.instance is None:
             Personality.instance = Personality()
         return Personality.instance
-        
-    def init_personality(self):
-        # these are personal points, on a range to 10
-        self.confident = 3
-        self.intelligent = 5
-        self.generous = 7
-        self.trusting = 7
-        self.brave = 3
-        self.greedy = 6
-        self.selfish = 6
-        self.evil = 6 
-        self.kind = 6
         
     def update_confidence(self,val=0):
         self.confident += val
