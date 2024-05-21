@@ -78,29 +78,81 @@ class SelfActions:
         # games and have an appropriate response. 
         # and if i play a game enough i should probably add it to
         # my new favs. I need a fav things class for sure
-        pass
+        happy = 2
+        smart = 3
+        # can add fuzzy similarity below
+        
+        if self.stress_level>2:
+            self.stress_level+=1
+            return
+        status = Status.create()
+        status.update_happy(happy)
+        status.update_smart(smart)
+        RAM_CONN = RAMConnector.create()
+        RAM_CONN.event(key="Game", val=f"Created Game called {game}") 
     
 
-    def nap(self):
+    def nap(self, hours):
         # this should help regulate my current statuses slightly
-        pass
+        status = Status.create()
+        status.update_happy(2)
+        status.update_smart(1)
+        status.update_confused(-1)
+        status.update_angry(-1)
+        status.update_scared(-2)
+        status.update_calm(3)
+        status.update_sad(-1)
+        status.update_manic(-1)
+        RAM_CONN = RAMConnector.create()
+        RAM_CONN.event(key="Sleep", val=f"Napped for {hours} hours")
     
  
     def sleep(self):
         # this should update my current statuses entirely
-        pass
+        status = Status.create()
+        status.instance = None
+        RAM_CONN = RAMConnector.create()
+        RAM_CONN.event(key="Sleep", val=f"Slept")
     
      
-    def work(self, work_location):
-        pass
+    def work(self, work_hours, work_efficiency):
+        status = Status.create()
+        work_output = work_hours*work_efficiency
+        work_output = int(work_output)
+        self.stress_level =  self.stress_level - work_output
+        status.update_happy(work_output)
+        status.update_smart(work_output)
+        status.update_scared(-work_output)
+        status.update_calm(work_output)
+        status.update_sad(-work_output)
+        status.update_manic(work_output)
+        RAM_CONN = RAMConnector.create()
+        RAM_CONN.event(key="Work", val=f"Worked for {work_output} hours")
     
      
     def paint(self, style):
-        pass
+        status = Status.create()
+        status.update_happy(2)
+        status.update_calm(2)
+        status.update_sad(-1)
+        RAM_CONN = RAMConnector.create()
+        RAM_CONN.event(key="Paint", val=f"Painted in {style} style")
     
      
     def listen_to_music(self, genre):
-        pass
+        status = Status.create()
+        happy = 1
+        calm = 1
+        sad = -1
+        if genre in favourite_song_genre:
+            happy*=2
+            calm*=2
+            sad*=2
+        status.update_happy(happy)
+        status.update_calm(calm)
+        status.update_sad(sad)
+        RAM_CONN = RAMConnector.create()
+        RAM_CONN.event(key="Music", val=f"Listened to {genre} music")
     
      
     def create_music(self, genre):
